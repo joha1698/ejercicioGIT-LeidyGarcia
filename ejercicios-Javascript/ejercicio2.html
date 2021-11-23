@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Javascript</title>
+    <script>
+        var arreglo1 = ['unacadena', 3, 9, 1, 10, 500, 1, 10, 200, 11, 2, 33, 23, true]
+
+        function obtenerNumeros() {
+            var numeros = []
+
+            for (let l = 0; l < arreglo1.length; l++) {
+                if (typeof (arreglo1[l]) == 'number') {
+                    numeros.push(arreglo1[l])
+                }
+            }
+            ordenar(numeros)
+        }
+
+        function ordenar(arreglo) {
+            for (let e = 0; e < arreglo.length; e++) {
+                for (let i = 0; i < arreglo.length; i++) {
+                    if (arreglo[e] >= arreglo[i]) {
+                        let temporal = arreglo[e]
+                        arreglo[e] = arreglo[i];
+                        arreglo[i] = temporal
+                    }
+                }
+            }
+            console.log(arreglo)
+        }
+
+        obtenerNumeros()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
