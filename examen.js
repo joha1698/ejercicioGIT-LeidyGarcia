@@ -79,8 +79,7 @@ class Estudiantes extends Persona {
     }
 
     obDetalles() {
-        console.log(this.nombre);
-        console.log(this.edad)
+        super.obDetalles()
         console.log(this.calificacion)
     }
 }
@@ -103,8 +102,7 @@ class Profesor extends Persona {
     }
 
     obDetalles() {
-        console.log(this.nombre);
-        console.log(this.edad);
+        super.obDetalles()
         console.log(this.asignatura);
         console.log(this.nivel)
     }
@@ -131,7 +129,7 @@ class Grupo {
             temp = temp + this.estudiantes[i].calificacion;
             this.promedio = temp;
         }
-        console.log(this.promedio)
+        console.log((this.promedio)/estudiantes.length)
     }
     obDetalles() {
         console.log(this.profesor);
